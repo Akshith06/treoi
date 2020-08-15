@@ -57,6 +57,8 @@ function draw() {
      {
        trex.velocityY = -12 ;
     }
+     //add gravity
+    trex.velocityY = trex.velocityY + 0.8;
     if(ground.x<0)
     {
        ground.x=ground.width/2; 
@@ -65,8 +67,6 @@ function draw() {
   spawnobstacles();
     score=score+Math.round(getFrameRate()/60);
   }
-  //add gravity
-    trex.velocityY = trex.velocityY + 0.8;
     trex.collide(invisibleground);
   if(gamestate===End)
   {
