@@ -53,7 +53,7 @@ function draw() {
   }
   if(gamestate===Play)
   {
-      if(keyDown("space"))
+      if(keyDown("space") && trex.y >= 359)
      {
        trex.velocityY = -12 ;
     }
